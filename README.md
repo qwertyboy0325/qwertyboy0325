@@ -10,10 +10,6 @@ I work mostly in **.NET / C#** and **TypeScript**, with a strong bias toward Dom
 
 - **[modulith-reliability-kit](https://github.com/qwertyboy0325/modulith-reliability-kit)** — .NET 8 modular-monolith reference for DB↔messaging reliability: transactional outbox, idempotent inbox, `FOR UPDATE SKIP LOCKED` multi-worker safety, dead-letter reprocessing, and an opt-in NATS JetStream transport. Every guarantee links to the code that enforces it and the test that pins it, and it ships a deterministic red→green case study of a stale-failure write race I found and fixed.
 
-- **[echlub-front](https://github.com/qwertyboy0325/echlub-front)** — TypeScript music-collaboration / DAW frontend built on Clean Architecture: bounded contexts, CQRS, event sourcing, undo/redo, and Tone.js audio + WebRTC real-time collaboration.
-
-- **[echlub_backend](https://github.com/qwertyboy0325/echlub_backend)** — TypeScript backend for EchLub: Express 5 + Socket.IO real-time collaboration rooms with WebRTC signaling relay, JWT auth, TypeORM, and a DDD module layout.
-
 - **[vox-proof](https://github.com/qwertyboy0325/vox-proof)** — Rust, local-first, evidence-backed transcript QA (early stage; scope and status stated honestly in the repo).
 
 ---
