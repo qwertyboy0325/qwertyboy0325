@@ -1,25 +1,27 @@
 # Ezra Wu (`qwertyboy0325`)
 
-This repository is a lightweight entry point to the public work collected across this GitHub profile.
+This is a public index of projects, experiments, and technical notes across the things I build.
 
-I work mostly on backend systems and reliability-oriented engineering, with an interest in messaging failure modes, correctness under concurrency, and designs whose guarantees are backed by tests rather than README claims.
-
-My current public work is mostly in **.NET / C#**, **TypeScript**, **Rust**, and **PostgreSQL**.
+I work across systems, realtime and edge workflows, data, and local-first AI exploration. The projects differ in domain and stack, but the recurring concern is making complex behaviour inspectable: understanding boundaries, failure modes, evidence, and recovery rather than treating a passing demo as proof.
 
 ---
 
-### Featured work
+## Current public work
 
-- **[modulith-reliability-kit](https://github.com/qwertyboy0325/modulith-reliability-kit)** — A .NET 8 modular-monolith reference implementation for DB↔messaging reliability: transactional outbox, idempotent inbox handling, `FOR UPDATE SKIP LOCKED` multi-worker coordination, dead-letter reprocessing, and an opt-in NATS JetStream transport. The repository connects its stated guarantees to the code that enforces them and the tests that pin them, and includes a deterministic red→green case study of a stale-failure write race.
+### Systems and reliability
 
-- **[vox-proof](https://github.com/qwertyboy0325/vox-proof)** — An early-stage Rust project exploring local-first, evidence-backed transcript QA. Its current scope and limitations are stated in the repository.
+- **[modulith-reliability-kit](https://github.com/qwertyboy0325/modulith-reliability-kit)** — An inspectable, test-backed reference and case study for database-to-message reliability. It is not a drop-in messaging framework or a Dapr replacement; it makes application-level contracts such as event identity, idempotent local effects, concurrent worker state transitions, retry/dead-letter behaviour, and the boundary between local transactions and external delivery explicit and testable. It includes a deterministic red→green reproduction of a stale failure-write race.
 
----
+### Local-first AI exploration
 
-### Technologies used across selected work
-
-`C#` · `.NET 8` · `EF Core` · `TypeScript` · `Node.js` · `Rust` · `PostgreSQL` · `NATS JetStream` · `Docker` · `Testcontainers` · `CQRS` · `Domain modeling`
+- **[vox-proof](https://github.com/qwertyboy0325/vox-proof)** — An early-stage Rust project exploring local-first, evidence-backed transcript QA. Its starting point is bounded review with traceable evidence and human decisions; later research directions include local semantic and contextual interpretation.
 
 ---
 
-Project status, guarantees, and known limitations are stated explicitly where possible.
+## Working languages and tools
+
+`C#` · `.NET` · `TypeScript` · `Rust` · `Python` · `PostgreSQL` · `NATS JetStream` · `Docker` · `Testcontainers`
+
+---
+
+Projects here vary in maturity. Their READMEs aim to state current scope, guarantees, and limitations explicitly.
