@@ -10,7 +10,7 @@ I work across systems, realtime and edge workflows, data, and local-first AI exp
 
 ### Systems and reliability
 
-- **[modulith-reliability-kit](https://github.com/qwertyboy0325/modulith-reliability-kit)** — An inspectable, test-backed reference and case study for database-to-message reliability. It is not a drop-in messaging framework or a Dapr replacement; it makes application-level contracts such as event identity, idempotent local effects, concurrent worker state transitions, retry/dead-letter behaviour, and the boundary between local transactions and external delivery explicit and testable. It includes a deterministic red→green reproduction of a stale failure-write race.
+- **[handoff-semantics](https://github.com/qwertyboy0325/handoff-semantics)** — An inspectable, test-backed reference and case study for database-to-message reliability semantics. It is not a drop-in messaging framework or a Dapr replacement; it makes application-level contracts such as event identity, idempotent local effects, concurrent worker state transitions, retry/dead-letter behaviour, and the boundary between local transactions and external delivery explicit and testable. It includes a deterministic red→green reproduction of a stale failure-write race.
 
 ### Local-first AI exploration
 
