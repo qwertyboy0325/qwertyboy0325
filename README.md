@@ -1,23 +1,25 @@
 # Ezra Wu (`qwertyboy0325`)
 
-Backend / distributed-systems engineer. I care about **messaging reliability, correctness under concurrency, and designs whose guarantees are backed by tests** — not by claims in a README.
+This repository is a lightweight entry point to the public work collected across this GitHub profile.
 
-I work mostly in **.NET / C#** and **TypeScript**, with a strong bias toward Domain-Driven Design, Clean Architecture, and treating cross-boundary reliability (outbox / inbox / idempotency / dead-letter) as a first-class concern.
+I work mostly on backend systems and reliability-oriented engineering, with an interest in messaging failure modes, correctness under concurrency, and designs whose guarantees are backed by tests rather than README claims.
+
+My current public work is mostly in **.NET / C#**, **TypeScript**, **Rust**, and **PostgreSQL**.
 
 ---
 
 ### Featured work
 
-- **[modulith-reliability-kit](https://github.com/qwertyboy0325/modulith-reliability-kit)** — .NET 8 modular-monolith reference for DB↔messaging reliability: transactional outbox, idempotent inbox, `FOR UPDATE SKIP LOCKED` multi-worker safety, dead-letter reprocessing, and an opt-in NATS JetStream transport. Every guarantee links to the code that enforces it and the test that pins it, and it ships a deterministic red→green case study of a stale-failure write race I found and fixed.
+- **[modulith-reliability-kit](https://github.com/qwertyboy0325/modulith-reliability-kit)** — A .NET 8 modular-monolith reference implementation for DB↔messaging reliability: transactional outbox, idempotent inbox handling, `FOR UPDATE SKIP LOCKED` multi-worker coordination, dead-letter reprocessing, and an opt-in NATS JetStream transport. The repository connects its stated guarantees to the code that enforces them and the tests that pin them, and includes a deterministic red→green case study of a stale-failure write race.
 
-- **[vox-proof](https://github.com/qwertyboy0325/vox-proof)** — Rust, local-first, evidence-backed transcript QA (early stage; scope and status stated honestly in the repo).
-
----
-
-### Toolbox
-
-`C#` · `.NET 8` · `EF Core` · `TypeScript` · `Node.js` · `Rust` · `PostgreSQL` · `NATS JetStream` · `Docker` · `Testcontainers` · DDD · CQRS · Event Sourcing
+- **[vox-proof](https://github.com/qwertyboy0325/vox-proof)** — An early-stage Rust project exploring local-first, evidence-backed transcript QA. Its current scope and limitations are stated in the repository.
 
 ---
 
-I try to state project status honestly — if something isn't verified end-to-end yet, the repo says so.
+### Technologies used across selected work
+
+`C#` · `.NET 8` · `EF Core` · `TypeScript` · `Node.js` · `Rust` · `PostgreSQL` · `NATS JetStream` · `Docker` · `Testcontainers` · `CQRS` · `Domain modeling`
+
+---
+
+Project status, guarantees, and known limitations are stated explicitly where possible.
