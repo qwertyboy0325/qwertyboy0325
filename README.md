@@ -1,78 +1,65 @@
 # Ezra Wu (`qwertyboy0325`)
 
-This is a public index of projects, experiments, and technical notes across the things I build.
+Backend and platform engineer working on reliability boundaries, data systems, realtime collaboration, and evidence-governed AI-assisted engineering.
 
-I work across backend/platform systems, realtime and edge workflows, data systems, and evidence-governed AI-assisted engineering. The projects differ in domain and stack, but the recurring concern is making complex behaviour inspectable: understanding boundaries, failure modes, evidence, and recovery rather than treating a passing demo as proof.
+I build systems that make state, failure, evidence, and recovery inspectable—not merely systems that appear to work in a passing demo.
 
----
+*Sometimes the state machine is audible.*
 
-## Available for focused contract work
-
-I am open to short, bounded backend/platform engagements where correctness, operational risk, data flow, or system boundaries matter.
-
-Good fits:
-
-- backend reliability audits: worker/queue/retry/idempotency, transactional outbox, idempotent inbox, and failure-mode review
-- PostgreSQL/data-system diagnosis: schema, query, index, migration, consistency, and reporting-path risk review
-- legacy backend triage: .NET/C# or TypeScript/Node.js systems, first safe intervention, CI/testing baseline, and modernization boundary planning
-- internal AI workflow prototypes: local-first or human-in-the-loop review tools with evidence, traceability, and explicit decision records
-- realtime/backend product slices: APIs, state synchronization, WebSocket/Socket.IO workflows, and interaction-heavy internal tooling
-
-I prefer scoped diagnostic or first-intervention projects: clear deliverables, written findings, explicit tradeoffs, and implementation where the boundary is well-defined.
+▶ **[Listen to the EchLub Four-Brain DJ concept demo](https://qwertyboy0325.github.io/echlub-demo/)**  
+A 104-second scripted browser performance using original synthesized material. Headphones recommended.
 
 ---
 
-## Current public work
+## Selected public work
 
-### Active builds
+### [VoxProof](https://github.com/qwertyboy0325/vox-proof)
 
-- **[vox-proof](https://github.com/qwertyboy0325/vox-proof)** — A Rust, local-first transcript QA system built around bounded evidence, deterministic review semantics, explicit human decisions, and reproducible validation. Its current public baseline includes the v0.1 core mechanism and merged persistence work; broader semantic and model-assisted behavior remains experimental rather than authoritative.
-- **[echlub](https://github.com/qwertyboy0325/echlub)** — A greenfield foundation for low-latency collaborative music production, combining a Rust domain and replication core, a web lab, WebSocket signaling, and evidence-producing performance harnesses. It currently establishes architecture and performance baselines rather than claiming a production-ready DAW or complete CRDT design.
+A Rust, local-first transcript QA system built around bounded evidence, deterministic review semantics, explicit human decisions, and reproducible validation.
 
-### Reliability reference work
+The current public baseline establishes a bounded v0.1 core mechanism and persistence layer. Broader semantic and model-assisted behavior remains experimental rather than authoritative.
 
-- **[handoff-semantics](https://github.com/qwertyboy0325/handoff-semantics)** — An inspectable, test-backed reference and case study for database-to-message reliability semantics. It is not a drop-in messaging framework or a Dapr replacement; it makes application-level contracts such as event identity, idempotent local effects, concurrent worker state transitions, retry/dead-letter behaviour, and the boundary between local transactions and external delivery explicit and testable. It includes a deterministic red→green reproduction of a stale failure-write race.
+### [EchLub](https://github.com/qwertyboy0325/echlub)
+
+A greenfield foundation for low-latency collaborative music production.
+
+It combines a Rust domain and replication core, a browser-based interaction lab, WebSocket signaling, and evidence-producing performance harnesses. The project currently establishes architecture and performance baselines rather than claiming a production-ready DAW or complete CRDT design.
+
+**[Experience the Four-Brain DJ demo →](https://qwertyboy0325.github.io/echlub-demo/)**
+
+### [Handoff Semantics](https://github.com/qwertyboy0325/handoff-semantics)
+
+An inspectable, test-backed reference for reliability semantics at the database-to-message boundary.
+
+It makes event identity, idempotent local effects, concurrent worker transitions, retry and dead-letter behavior, and the boundary between local transactions and external delivery explicit and testable. It also includes a deterministic red-to-green reproduction of a stale failure-write race.
 
 ---
 
-## Confirmed working areas
+## Focused engineering engagements
 
-### Backend and platform
+I am available for short, bounded backend and platform engagements where correctness, operational risk, data flow, or system boundaries matter.
+
+Typical work includes:
+
+- backend reliability and failure-mode audits
+- PostgreSQL schema, query, migration, and consistency diagnosis
+- worker, queue, retry, idempotency, outbox, and inbox review
+- legacy .NET/C# or TypeScript/Node.js backend triage
+- realtime APIs, state synchronization, and internal tooling
+- local-first or human-in-the-loop AI workflow prototypes
+
+I prefer engagements with explicit scope, inspectable deliverables, written findings, and clearly stated tradeoffs.
+
+---
+
+## Working areas
 
 `C#` · `.NET` · `Go` · `TypeScript` · `Node.js` · `Rust` · `Python`
 
-- API and backend service design
-- modular monolith / bounded-module design
-- worker, queue, retry, idempotency, and dead-letter handling
-- transactional boundaries between database state and external message delivery
-- legacy-system triage and safe first-intervention planning
-
-### Data and messaging
-
 `PostgreSQL` · `TimescaleDB` · `PostGIS` · `MySQL` · `NATS JetStream` · `Kafka`
-
-- schema and query review
-- migration and reconciliation planning
-- reporting-path and historical-data performance diagnosis
-- event-driven workflow design with explicit delivery and recovery semantics
-
-### Dev workflow and operations
 
 `Docker` · `GitHub Actions` · `Testcontainers` · `Prometheus` · `Grafana` · `Linux`
 
-- CI/testing baselines
-- integration tests against real infrastructure
-- containerized development and demo environments
-- operational visibility and failure-path verification
+`React` · `Vite` · `WebSocket` · `Socket.IO`
 
-### Realtime and product-facing systems
-
-`React` · `Vite` · `WebSocket` · `Socket.IO` · `REST APIs`
-
-- realtime collaboration and state synchronization
-- interactive frontend/backend product slices
-- internal tools where the UI must expose state, evidence, or decisions clearly
-
----
-
-Projects here vary in maturity. Their READMEs aim to state current scope, guarantees, and limitations explicitly.
+Projects here vary in maturity. Their READMEs aim to state current scope, guarantees, evidence, and limitations explicitly.
