@@ -2,7 +2,7 @@
 
 This is a public index of projects, experiments, and technical notes across the things I build.
 
-I work across backend/platform systems, realtime and edge workflows, data systems, and local-first AI exploration. The projects differ in domain and stack, but the recurring concern is making complex behaviour inspectable: understanding boundaries, failure modes, evidence, and recovery rather than treating a passing demo as proof.
+I work across backend/platform systems, realtime and edge workflows, data systems, and evidence-governed AI-assisted engineering. The projects differ in domain and stack, but the recurring concern is making complex behaviour inspectable: understanding boundaries, failure modes, evidence, and recovery rather than treating a passing demo as proof.
 
 ---
 
@@ -24,9 +24,10 @@ I prefer scoped diagnostic or first-intervention projects: clear deliverables, w
 
 ## Current public work
 
-### Active build
+### Active builds
 
-- **[vox-proof](https://github.com/qwertyboy0325/vox-proof)** — An early-stage Rust project exploring local-first, evidence-backed transcript QA. Its starting point is bounded review with traceable evidence and human decisions; later research directions include local semantic and contextual interpretation.
+- **[vox-proof](https://github.com/qwertyboy0325/vox-proof)** — A Rust, local-first transcript QA system built around bounded evidence, deterministic review semantics, explicit human decisions, and reproducible validation. Its current public baseline includes the v0.1 core mechanism and merged persistence work; broader semantic and model-assisted behavior remains experimental rather than authoritative.
+- **[echlub](https://github.com/qwertyboy0325/echlub)** — A greenfield foundation for low-latency collaborative music production, combining a Rust domain and replication core, a web lab, WebSocket signaling, and evidence-producing performance harnesses. It currently establishes architecture and performance baselines rather than claiming a production-ready DAW or complete CRDT design.
 
 ### Reliability reference work
 
