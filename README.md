@@ -1,13 +1,8 @@
 # Ezra Wu (`qwertyboy0325`)
 
-Backend and platform engineer working on reliability boundaries, data systems, realtime collaboration, and evidence-governed AI-assisted engineering.
+Backend and platform engineer working on reliability boundaries, data systems, realtime systems, and evidence-governed AI-assisted engineering.
 
 I build systems that make state, failure, evidence, and recovery inspectable—not merely systems that appear to work in a passing demo.
-
-*Sometimes the state machine is audible.*
-
-▶ **[Listen to the EchLub Four-Brain DJ concept demo](https://qwertyboy0325.github.io/echlub-demo/)**  
-A 104-second scripted browser performance using original synthesized material. Headphones recommended.
 
 ---
 
@@ -19,13 +14,11 @@ A Rust, local-first transcript QA system built around bounded evidence, determin
 
 The current public baseline establishes a bounded v0.1 core mechanism and persistence layer. Broader semantic and model-assisted behavior remains experimental rather than authoritative.
 
-### [EchLub](https://github.com/qwertyboy0325/echlub)
+### [EchLub](https://github.com/qwertyboy0325/echlub) — experimental
 
-A greenfield foundation for low-latency collaborative music production.
+An exploratory Rust and TypeScript music-systems foundation for explicit musical state, deterministic semantic operations, transport-independent protocol boundaries, and performance measurement.
 
-It combines a Rust domain and replication core, a browser-based interaction lab, WebSocket signaling, and evidence-producing performance harnesses. The project currently establishes architecture and performance baselines rather than claiming a production-ready DAW or complete CRDT design.
-
-**[Experience the Four-Brain DJ demo →](https://qwertyboy0325.github.io/echlub-demo/)**
+The earlier collaboration-led demo direction did not establish a product differentiator and is retained as a failed product-narrative experiment, not as a current collaborative-composition claim. The repository demonstrates bounded architecture and evidence work rather than a production-ready DAW or an accepted product thesis.
 
 ### [Handoff Semantics](https://github.com/qwertyboy0325/handoff-semantics)
 
