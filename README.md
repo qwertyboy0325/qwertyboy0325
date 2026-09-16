@@ -1,19 +1,37 @@
 # Ezra Wu (`qwertyboy0325`)
 
-## Backend / Platform Engineer
+## Backend / Data Reliability Engineer
 
-I build backend systems where correct state changes survive failure: database
-transactions, idempotent workers, retry and recovery paths, and explicit
-handoffs to downstream services.
+I diagnose and harden backend and data systems where failures, concurrency,
+migrations, and integrations matter.
 
-My public work spans C#/.NET and PostgreSQL reliability, Go realtime-data
-pipelines, Rust systems engineering, human-reviewed AI workflows, and realtime
-protocol experiments.
+My production experience includes fleet telemetry, PostgreSQL/TimescaleDB
+modernization, migration and reconciliation, multi-tenant isolation, event
+handoff/recovery, and real-time medical-video inference workflows.
 
-`Backend reliability` · `Data consistency` · `Go realtime systems` · `Rust systems` · `Human-governed AI workflows`
+`Backend reliability` · `PostgreSQL / TimescaleDB` · `Data migration` · `Async processing` · `System integration`
 
-Open to remote backend / platform engineering roles and focused engineering
-engagements.
+### Available for
+
+- Remote backend / platform / data-reliability roles.
+- Short, scoped engineering engagements around API/integration debugging,
+  PostgreSQL performance or migration, async processing/reliability, and
+  backend integration of AI/LLM workflows.
+- Remediation work where an existing prototype or AI-generated implementation
+  needs to be made testable, reliable, and operationally understandable.
+
+Taiwan / UTC+8 · async-friendly · contact: [LinkedIn](https://www.linkedin.com/in/ezra-wu-b96a1828a/) · `ezra40907@gmail.com`
+
+## Production background
+
+- Worked on fleet/telemetry systems supporting roughly 18,000 vehicles, including
+  large legacy MySQL data paths and PostgreSQL/TimescaleDB redesign and validation.
+- Improved a representative single-vehicle 24-hour history path from 30s+ / stall-prone
+  behavior to typically under 1s through time-series aggregation, indexing, and query-path redesign.
+- Worked on migration/reconciliation, tenant-isolation boundaries, event delivery/retry,
+  and deterministic recovery behavior.
+- Built and supported real-time surgical-video inference workflows using Unity/C#,
+  Python, NVIDIA Holoscan, ONNX/TensorRT/Triton, and DeepStream.
 
 ## Selected public work
 
@@ -21,53 +39,33 @@ engagements.
 
 **C# / .NET · PostgreSQL · NATS JetStream · Testcontainers**
 
-A test-backed reference implementation for the database-to-message boundary.
-It makes transactional outbox/inbox behavior, idempotent local effects,
-`FOR UPDATE SKIP LOCKED` workers, retries, dead letters, and bounded delivery
-guarantees concrete. Integration tests reproduce and prevent a stale
-failure-write race between concurrent workers.
+A test-backed reference for database-to-message reliability: transactional outbox,
+idempotent inbox, `FOR UPDATE SKIP LOCKED` workers, bounded retry/dead-letter,
+operator reprocessing, and a deterministic stale failure-write concurrency case study.
 
 ### [Titan-S Realtime Go Case Study](https://github.com/qwertyboy0325/titan-s-realtime-go-case-study)
 
 **Go · bounded concurrency · realtime-data pipeline · deterministic tests**
 
-A clean-room, offline case study for typed market-data ingestion, bounded
-queues, semaphore-limited workers, store-scoped duplicate handling, and
-deterministic time-series summaries. It is an engineering demonstration with
-synthetic fixtures, not a trading product or a production reliability claim.
+A clean-room engineering case study for typed ingestion, bounded queues,
+semaphore-limited workers, duplicate handling, reconnect/backoff, and deterministic
+window summaries using synthetic fixtures.
 
 ### [VoxProof](https://github.com/qwertyboy0325/vox-proof)
 
-**Rust · local-first transcript QA · human review**
+**Rust · local-first workflow · human review · deterministic persistence research**
 
-A bounded prototype for reviewing existing subtitle transcripts. It preserves
-the source and evidence for each candidate, and produces reviewed output only
-after explicit human decisions. Experimental retrieval and ranking are kept
-separate from the authoritative review path.
+A bounded transcript-QA prototype where probabilistic retrieval/ranking cannot
+silently overwrite authoritative reviewed output. Useful as evidence of explicit
+state ownership, review boundaries, and fail-closed engineering.
 
-### [Gargantua Relativistic Renderer](https://github.com/qwertyboy0325/blackhole-rust)
+## Additional engineering work
 
-**Rust · numerical integration · deterministic artifacts**
-
-An offline renderer for inspectable light paths in a Kerr spacetime. Its CPU
-`f64` geodesic path, typed ray outcomes, and validation artifacts keep physical
-results distinct from display presentation. It is a research renderer, not an
-*Interstellar* reproduction or a realtime GPU product.
-
-### [EchLub](https://github.com/qwertyboy0325/echlub)
-
-**Rust · TypeScript / React · WebSocket / WebRTC research**
-
-An experimental music-systems foundation with deterministic musical state,
-transport-independent protocol boundaries, a React/WASM lab UI, and
-browser-performance evidence. It is technical evidence, not a production
-DAW or an established product thesis.
+- [Gargantua Relativistic Renderer](https://github.com/qwertyboy0325/blackhole-rust) — Rust numerical integration, deterministic artifacts, validation-oriented rendering.
+- [EchLub](https://github.com/qwertyboy0325/echlub) — Rust + TypeScript/React/WASM, WebSocket/WebRTC experiments, reproducible browser-performance evidence.
 
 ## Working approach
 
-Some projects use substantial AI assistance. I keep engineering ownership
-inspectable by defining constraints, reviewing diffs, and tying claims to code,
-tests, or reproducible artifacts; model output is not accepted automatically.
-
-Projects here vary in maturity; each README states its scope, evidence, and
-limitations directly.
+I use AI tooling when it improves throughput, but engineering ownership stays explicit:
+constraints, architecture, tests, diffs, and artifacts remain reviewable, and model
+output is not accepted as evidence by itself.
