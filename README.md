@@ -1,71 +1,34 @@
 # Ezra Wu (`qwertyboy0325`)
 
-## Backend / Data Reliability Engineer
+**Backend / full-stack engineer — PostgreSQL & time-series data, event-driven reliability, architecture decisions.**
+Taiwan (UTC+8) · async-first · open to remote roles · [LinkedIn](https://www.linkedin.com/in/ezra-wu-b96a1828a/) · [Blog](https://qwertyboy0325.hashnode.dev/) · `ezra40907@gmail.com`
 
-I diagnose and harden backend and data systems where failures, concurrency,
-migrations, and integrations matter.
+## What I've built
 
-My production experience includes fleet telemetry, PostgreSQL/TimescaleDB
-modernization, migration and reconciliation, multi-tenant isolation, event
-handoff/recovery, and real-time medical-video inference workflows.
+- **Multi-tenant fleet platform (Jasslin, 2025–2026).** Primary platform owner in a two-person team; about 18,000 registered vehicles reporting at 1 Hz.
+  - .NET 8 modular monolith, NATS JetStream, TimescaleDB, PostgreSQL row-level security, and a React dashboard.
+  - Representative production chart queries went from 10–60+ s to 1–3 s.
+  - Nightly 3–4 hour reports were replaced by incremental computation about 2–3 minutes behind live data.
+- **Real-time surgical-video inference (Smart Surgery, 2023–2025).** NVIDIA Holoscan inference core and operators, integrated with C# via P/Invoke, plus a later C++/TensorRT pipeline delivered as a contract.
 
-`Backend reliability` · `PostgreSQL / TimescaleDB` · `Data migration` · `Async processing` · `System integration`
+## How I work
 
-### Available for
-
-- Remote backend / platform / data-reliability roles.
-- Short, scoped engineering engagements around API/integration debugging,
-  PostgreSQL performance or migration, async processing/reliability, and
-  backend integration of AI/LLM workflows.
-- Remediation work where an existing prototype or AI-generated implementation
-  needs to be made testable, reliable, and operationally understandable.
-
-Taiwan / UTC+8 · async-friendly · contact: [LinkedIn](https://www.linkedin.com/in/ezra-wu-b96a1828a/) · `ezra40907@gmail.com`
-
-## Production background
-
-- Worked on fleet/telemetry systems supporting roughly 18,000 vehicles, including
-  large legacy MySQL data paths and PostgreSQL/TimescaleDB redesign and validation.
-- Improved a representative single-vehicle 24-hour history path from 30s+ / stall-prone
-  behavior to typically under 1s through time-series aggregation, indexing, and query-path redesign.
-- Worked on migration/reconciliation, tenant-isolation boundaries, event delivery/retry,
-  and deterministic recovery behavior.
-- Built and supported real-time surgical-video inference workflows using Unity/C#,
-  Python, NVIDIA Holoscan, ONNX/TensorRT/Triton, and DeepStream.
+Decisions go into ADRs and implementation plans with acceptance criteria before code. AI agents do most of the implementation; I own scope, architecture, tests as acceptance gates, and diff review. Model output is not accepted as evidence by itself.
 
 ## Selected public work
 
-### [Handoff Semantics](https://github.com/qwertyboy0325/handoff-semantics)
+### [Handoff Semantics](https://github.com/qwertyboy0325/handoff-semantics) — C# / .NET 8 · PostgreSQL · NATS JetStream · Testcontainers
+A test-backed reference for database-to-message reliability: transactional outbox, idempotent inbox, `FOR UPDATE SKIP LOCKED` workers, retry/dead-letter, and a deterministic red-to-green reproduction of a concurrency race.
 
-**C# / .NET · PostgreSQL · NATS JetStream · Testcontainers**
+### [Titan-S Realtime Go Case Study](https://github.com/qwertyboy0325/titan-s-realtime-go-case-study) — Go
+Bounded-queue backpressure, semaphore-limited workers, capped backoff, and ID-based dedupe, with race-tested CI. A small demo, not a production system.
 
-A test-backed reference for database-to-message reliability: transactional outbox,
-idempotent inbox, `FOR UPDATE SKIP LOCKED` workers, bounded retry/dead-letter,
-operator reprocessing, and a deterministic stale failure-write concurrency case study.
+## Writing
 
-### [Titan-S Realtime Go Case Study](https://github.com/qwertyboy0325/titan-s-realtime-go-case-study)
+- [FOR UPDATE SKIP LOCKED Was Not Enough: A Stale Failure Write Race in an Inbox Processor](https://qwertyboy0325.hashnode.dev/)
 
-**Go · bounded concurrency · realtime-data pipeline · deterministic tests**
+## Experiments
 
-A clean-room engineering case study for typed ingestion, bounded queues,
-semaphore-limited workers, duplicate handling, reconnect/backoff, and deterministic
-window summaries using synthetic fixtures.
-
-### [VoxProof](https://github.com/qwertyboy0325/vox-proof)
-
-**Rust · local-first workflow · human review · deterministic persistence research**
-
-A bounded transcript-QA prototype where probabilistic retrieval/ranking cannot
-silently overwrite authoritative reviewed output. Useful as evidence of explicit
-state ownership, review boundaries, and fail-closed engineering.
-
-## Additional engineering work
-
-- [Gargantua Relativistic Renderer](https://github.com/qwertyboy0325/blackhole-rust) — Rust numerical integration, deterministic artifacts, validation-oriented rendering.
-- [EchLub](https://github.com/qwertyboy0325/echlub) — Rust + TypeScript/React/WASM, WebSocket/WebRTC experiments, reproducible browser-performance evidence.
-
-## Working approach
-
-I use AI tooling when it improves throughput, but engineering ownership stays explicit:
-constraints, architecture, tests, diffs, and artifacts remain reviewable, and model
-output is not accepted as evidence by itself.
+- [VoxProof](https://github.com/qwertyboy0325/vox-proof) — Rust transcript-QA prototype; an example of keeping AI-assisted work behind explicit review boundaries.
+- [Gargantua Relativistic Renderer](https://github.com/qwertyboy0325/blackhole-rust) — Rust research renderer with deterministic, validated artifacts.
+- [Personal site](https://qwertyboy0325.github.io/personal-site/) — no-framework, single-page site with unit and end-to-end tests.
