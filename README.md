@@ -20,6 +20,14 @@ Decisions go into ADRs and implementation plans with acceptance criteria before 
 ### [Handoff Semantics](https://github.com/qwertyboy0325/handoff-semantics) — C# / .NET 8 · PostgreSQL · NATS JetStream · Testcontainers
 A test-backed reference for database-to-message reliability: transactional outbox, idempotent inbox, `FOR UPDATE SKIP LOCKED` workers, retry/dead-letter, and a deterministic red-to-green reproduction of a concurrency race.
 
+### [EchLub: real-time audio building blocks](https://github.com/qwertyboy0325/echlub-public) — Rust · lock-free SPSC rings · macOS real-time threads (Mach / CoreAudio FFI) · WebAssembly
+Five independent crates exported from the engine of a native DAW I am building, with the evidence documents that say how each claim is tested.
+- A FLAC encoder written from scratch (LPC to order 12, Rice partitioning, four stereo modes), tested for bit-exact round trips, and a streaming WAV writer that can be repaired after a crash.
+- A counting allocator with a positive control, so "zero allocations on the audio thread" cannot pass by accident.
+- DSP math that gives the same bits on x86-64 Linux and Apple silicon.
+
+The engine, synthesizer, and application are not in the public repository, and no latency claim is made. The app also runs as a [browser build](https://qwertyboy0325.github.io/echlub-public/) (checked in desktop Chrome only).
+
 ### [Titan-S Realtime Go Case Study](https://github.com/qwertyboy0325/titan-s-realtime-go-case-study) — Go
 Bounded-queue backpressure, semaphore-limited workers, capped backoff, and ID-based dedupe, with race-tested CI. A small demo, not a production system.
 
